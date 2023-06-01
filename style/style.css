@@ -123,20 +123,24 @@ html {
 
 .unit-metric {
   position: relative;
+  max-width: 0;
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+  transition: all 0.3s ease-out;
 }
 .unit-metric.active {
   opacity: 1;
+  max-width: 650px;
   max-height: 650px;
 }
 
 .unit-imperial {
   position: relative;
+  max-width: 0;
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
+  transform-origin: right;
+  transition: all 0.3s ease-out;
 }
 .unit-imperial .input-wrapper {
   display: flex;
@@ -147,6 +151,7 @@ html {
 }
 .unit-imperial.active {
   opacity: 1;
+  max-width: 650px;
   max-height: 650px;
 }
 
@@ -226,6 +231,7 @@ html {
     padding: 32px 40px;
   }
   .description .calculate {
+    padding: 32px;
     margin-top: 40px;
   }
   .description .calculate h2 {
@@ -237,6 +243,29 @@ html {
   .unit-metric {
     display: flex;
     gap: 24px;
+  }
+  .bmi-result {
+    margin-top: 16px;
+    border-top-right-radius: 9999px;
+    border-bottom-right-radius: 9999px;
+    border-top-left-radius: 1500px;
+    border-bottom-left-radius: 1500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+  .bmi-result .container-title-result {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bmi-result .container-title-result #title-bmi {
+    flex-grow: 1;
+  }
+  .bmi-result .container-title-result #result {
+    flex-grow: 1;
+    margin-bottom: 0;
   }
 }
 
