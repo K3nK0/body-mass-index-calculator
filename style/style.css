@@ -116,15 +116,26 @@ html {
   color: #253347;
 }
 
+.container-unit {
+  position: relative;
+  overflow: hidden;
+}
+
 .unit-metric {
-  display: none;
+  position: absolute;
+  transform: translateY(-300px);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.2s ease-out;
 }
 .unit-metric.active {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .unit-imperial {
-  display: none;
+  transform: translateY(300px);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.2s ease-out;
 }
 .unit-imperial .input-wrapper {
   display: flex;
@@ -134,7 +145,8 @@ html {
   position: relative;
 }
 .unit-imperial.active {
-  display: block;
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .input-height-weight {
@@ -166,7 +178,8 @@ html {
   color: #253347;
 }
 .input-wrapper input:focus {
-  outline: 1px solid #345FF6;
+  outline: none;
+  border: 1px solid #345FF6;
 }
 .input-wrapper span {
   position: absolute;

@@ -125,16 +125,29 @@ html {
     }
 }
 
+.container-unit {
+    position: relative;
+    overflow: hidden;
+}
+
 .unit-metric {
-    display: none;
+    position: absolute;
+    transform: translateY(-300px);
+    opacity: 0;
+    transition: transform .3s ease-out,
+                opacity .2s ease-out;
 
     &.active {
-        display: block;
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
 .unit-imperial {
-    display: none;
+    transform: translateY(300px);
+    opacity: 0;
+    transition: transform .3s ease-out,
+                opacity .2s ease-out;
 
     .input-wrapper {
         display: flex;
@@ -146,7 +159,8 @@ html {
     }
 
     &.active {
-        display: block;
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
@@ -181,7 +195,9 @@ html {
         color: $gunMetal;
 
         &:focus {
-            outline: 1px solid $blue;
+            // outline: 1px solid $blue;
+            outline: none;
+            border: 1px solid $blue;
         }
     }
     span {
