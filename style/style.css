@@ -116,6 +116,27 @@ html {
   color: #253347;
 }
 
+.unit-metric {
+  display: none;
+}
+.unit-metric.active {
+  display: block;
+}
+
+.unit-imperial {
+  display: none;
+}
+.unit-imperial .input-wrapper {
+  display: flex;
+  gap: 16px;
+}
+.unit-imperial .input-wrapper .metric-input-wrapper {
+  position: relative;
+}
+.unit-imperial.active {
+  display: block;
+}
+
 .input-height-weight {
   position: relative;
 }
@@ -143,6 +164,9 @@ html {
   line-height: 29px;
   letter-spacing: -0.05em;
   color: #253347;
+}
+.input-wrapper input:focus {
+  outline: 1px solid #345FF6;
 }
 .input-wrapper span {
   position: absolute;
@@ -179,7 +203,7 @@ html {
   line-height: 150%;
   color: #FFFFFF;
 }
-.bmi-result .bmi-result-description #range {
+.bmi-result .bmi-result-description span {
   font-weight: 600;
 }
 

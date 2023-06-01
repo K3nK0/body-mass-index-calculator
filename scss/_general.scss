@@ -125,6 +125,31 @@ html {
     }
 }
 
+.unit-metric {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}
+
+.unit-imperial {
+    display: none;
+
+    .input-wrapper {
+        display: flex;
+        gap: 16px;
+
+        .metric-input-wrapper {
+            position: relative;
+        }
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
 .input-height-weight {
     position: relative;
     @extend %flex-column;
@@ -154,6 +179,10 @@ html {
         line-height: 29px;
         letter-spacing: -0.05em;
         color: $gunMetal;
+
+        &:focus {
+            outline: 1px solid $blue;
+        }
     }
     span {
         position: absolute;
@@ -193,7 +222,7 @@ html {
         line-height: 150%;
         color: $white;
 
-        #range {
+        span {
             font-weight: 600;
         }
     }
