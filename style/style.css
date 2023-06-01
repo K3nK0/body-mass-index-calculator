@@ -122,20 +122,21 @@ html {
 }
 
 .unit-metric {
-  position: absolute;
-  transform: translateY(-300px);
+  position: relative;
+  max-height: 0;
   opacity: 0;
-  transition: transform 0.3s ease-out, opacity 0.2s ease-out;
+  transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
 }
 .unit-metric.active {
   opacity: 1;
-  transform: translateY(0);
+  max-height: 650px;
 }
 
 .unit-imperial {
-  transform: translateY(300px);
+  position: relative;
+  max-height: 0;
   opacity: 0;
-  transition: transform 0.3s ease-out, opacity 0.2s ease-out;
+  transition: max-height 0.3s ease-out, opacity 0.2s ease-out;
 }
 .unit-imperial .input-wrapper {
   display: flex;
@@ -146,7 +147,7 @@ html {
 }
 .unit-imperial.active {
   opacity: 1;
-  transform: translateY(0);
+  max-height: 650px;
 }
 
 .input-height-weight {
@@ -218,6 +219,25 @@ html {
 }
 .bmi-result .bmi-result-description span {
   font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .description {
+    padding: 32px 40px;
+  }
+  .description .calculate {
+    margin-top: 40px;
+  }
+  .description .calculate h2 {
+    margin-bottom: 32px;
+  }
+  .choice-units {
+    margin-bottom: 32px;
+  }
+  .unit-metric {
+    display: flex;
+    gap: 24px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

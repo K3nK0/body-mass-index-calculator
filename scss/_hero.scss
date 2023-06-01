@@ -131,22 +131,23 @@ html {
 }
 
 .unit-metric {
-    position: absolute;
-    transform: translateY(-300px);
+    position: relative;
+    max-height: 0;
     opacity: 0;
-    transition: transform .3s ease-out,
+    transition: max-height .3s ease-out,
                 opacity .2s ease-out;
 
     &.active {
         opacity: 1;
-        transform: translateY(0);
+        max-height: 650px;
     }
 }
 
 .unit-imperial {
-    transform: translateY(300px);
+    position: relative;
+    max-height: 0;
     opacity: 0;
-    transition: transform .3s ease-out,
+    transition: max-height .3s ease-out,
                 opacity .2s ease-out;
 
     .input-wrapper {
@@ -160,7 +161,7 @@ html {
 
     &.active {
         opacity: 1;
-        transform: translateY(0);
+        max-height: 650px;
     }
 }
 
@@ -241,5 +242,29 @@ html {
         span {
             font-weight: 600;
         }
+    }
+}
+
+
+// ------ TABLET --------
+
+@media (min-width: 768px){
+
+    .description {
+        padding: 32px 40px;
+        .calculate {
+            margin-top: 40px;
+            h2 {
+                margin-bottom: 32px;
+            }
+        }
+    }
+    .choice-units {
+        margin-bottom: 32px;
+    }
+
+    .unit-metric {
+        display: flex;
+        gap: 24px;
     }
 }
