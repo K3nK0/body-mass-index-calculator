@@ -55,8 +55,7 @@ input {
     }
 
     p {
-        line-height: 150%;
-        color: $darkElectric;
+        @extend %bodyM
     }
 }
 
@@ -327,6 +326,10 @@ input {
 // --------- DESKTOP -------------
 
 @media (min-width: 1024px) {
+
+    .hero {
+        margin-bottom: 65px;
+    }
 
     .background-hero {
         width: 68vw;
