@@ -1,0 +1,56 @@
+.tips {
+    padding: 56px 20px;
+    display: grid;
+    grid-template: auto 1fr / 1fr;
+    gap: 40px;
+    margin-bottom: 72px;
+
+    img {
+        margin-bottom: 32px;
+    }
+
+    h3 {
+        margin-bottom: 24px;
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+        letter-spacing: -0.05em;
+        color: $gunMetal;
+    }
+
+    p {
+        @extend %bodyM
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    .tips {
+        padding: 60px 40px;
+
+        img {
+            margin: 0;
+        }
+    }
+    .container-tips {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+}
+
+@media (min-width: 1024px) {
+
+    .tips {
+        grid-template: 1fr / repeat(3, 1fr);
+        padding: 72px 9.7vw 96px;
+    }
+
+    .container-tips {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}

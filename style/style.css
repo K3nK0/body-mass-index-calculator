@@ -3,7 +3,7 @@
   flex-direction: column;
 }
 
-.container-text-your-result p, .description p {
+.tips p, .container-text-your-result p, .description p {
   font-size: 16px;
   line-height: 150%;
   color: #5E6E85;
@@ -336,6 +336,9 @@ input {
   display: grid;
   grid-template: auto 1fr/1fr;
 }
+.your-result .curved-line-left {
+  display: none;
+}
 
 .container-img {
   position: relative;
@@ -388,6 +391,12 @@ input {
     padding: 0 9.7vw;
     gap: clamp(100px, 9.5vw, 200px);
   }
+  .your-result .curved-line-left {
+    display: block;
+    position: absolute;
+    top: -50px;
+    right: 12vw;
+  }
   .container-img {
     position: relative;
     width: 100%;
@@ -408,6 +417,47 @@ input {
   .container-text-your-result h2 {
     font-size: 48px;
     margin-bottom: 35px;
+  }
+}
+.tips {
+  padding: 56px 20px;
+  display: grid;
+  grid-template: auto 1fr/1fr;
+  gap: 40px;
+  margin-bottom: 72px;
+}
+.tips img {
+  margin-bottom: 32px;
+}
+.tips h3 {
+  margin-bottom: 24px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: -0.05em;
+  color: #253347;
+}
+@media (min-width: 768px) {
+  .tips {
+    padding: 60px 40px;
+  }
+  .tips img {
+    margin: 0;
+  }
+  .container-tips {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .tips {
+    grid-template: 1fr/repeat(3, 1fr);
+    padding: 72px 9.7vw 96px;
+  }
+  .container-tips {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
