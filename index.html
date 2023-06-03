@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculate your Body Mass Index.">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,12 +36,12 @@
           <div class="choice-units">
   
             <div class="choice">
-              <input type="radio" id="metric" value="metric" name="unit" checked>
+              <input type="radio" id="metric" value="metric" name="unit" aria-label="choice unit metric" checked>
               <label for="metric">Metric</label>
             </div>
   
             <div class="choice">
-              <input type="radio" id="imperial" value="imperial" name="unit">
+              <input type="radio" id="imperial" value="imperial" name="unit" aria-label="choice unit imperial">
               <label for="imperial">Imperial</label>
             </div>
             
@@ -51,14 +52,14 @@
               <div class="input-height-weight">
                 <label for="cm">Height</label>
                 <div class="input-wrapper">
-                  <input type="text" id="cm" name="height">
+                  <input type="text" id="cm" name="height" aria-label="enter centimètre">
                   <span>cm</span>
                 </div>
               </div>
               <div class="input-height-weight">
                 <label for="kg">Weight</label>
                 <div class="input-wrapper">
-                  <input type="text" id="kg" name="weight">
+                  <input type="text" id="kg" name="weight" aria-label="enter Kilogramme">
                   <span>kg</span>
                 </div>
               </div>
@@ -69,11 +70,11 @@
                 <label for="height">Height</label>
                 <div class="input-wrapper">
                   <div class="metric-input-wrapper">
-                    <input type="text" id="feet" name="feet">
+                    <input type="text" id="feet" name="feet" aria-label="enter feet">
                     <span>ft</span>
                   </div>
                   <div class="metric-input-wrapper">
-                    <input type="text" id="inch" name="inch">
+                    <input type="text" id="inch" name="inch" aria-label="enter inch">
                   <span>in</span>
                   </div>
                 </div>
@@ -82,11 +83,11 @@
                 <label for="weight">Weight</label>
                 <div class="input-wrapper">
                   <div class="metric-input-wrapper">
-                    <input type="text" id="stone" name="stone">
+                    <input type="text" id="stone" name="stone" aria-label="enter stone">
                     <span>st</span>
                   </div>
                   <div class="metric-input-wrapper">
-                    <input type="text" id="livre" name="livre">
+                    <input type="text" id="livre" name="livre" aria-label="enter livre">
                   <span>lbs</span>
                   </div>
                 </div>
