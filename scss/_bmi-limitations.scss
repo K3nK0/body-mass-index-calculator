@@ -1,0 +1,123 @@
+.bmi-limitations {
+    padding: 0 20px;
+    margin-bottom: 96px;
+    display: grid;
+    grid-template: auto / 1fr;
+    gap: 16px;
+}
+
+.container-limitation-text {
+    margin-bottom: 40px;
+
+    h3 {
+        font-weight: 600;
+        font-size: 32px;
+        line-height: 110%;
+        text-align: center;
+        letter-spacing: -0.05em;
+        color: $gunMetal;
+        margin-bottom: 32px;
+    }
+
+    p {
+        @extend %bodyM;
+        text-align: center;
+    }
+}
+
+.card-limitation {
+    padding: 24px;
+    background-color: $white;
+    box-shadow: 16px 32px 56px rgba(143, 174, 207, 0.25);
+    border-radius: 16px;
+
+    p {
+        @extend %bodyM;
+    }
+}
+
+.subtitle-limitation {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+
+    h4 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 24px;
+        letter-spacing: -0.05em;
+        color: $gunMetal;
+    }
+}
+
+.curved-line-left {
+    display: none;
+}
+
+
+@media (min-width: 768px) {
+
+    .bmi-limitations {
+        padding: 0 40px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 24px 15px;
+    }
+
+    .card-limitation {
+        max-width: 335.5px;
+        padding: 32px;
+    }
+
+}
+
+
+@media (min-width: 1400px) {
+
+    .bmi-limitations {
+        padding: 0 9.7vw;
+        margin-bottom: 120px;
+        column-gap: 1vw;
+    }
+
+    .container-limitation-text {
+        max-width: 564px;
+        margin-right: auto;
+        
+        h3 {
+            text-align: left;
+            font-size: 48px;
+        }
+    
+        p {
+            text-align: left;
+        }
+    }
+
+    .card-limitation {
+        min-width: 365px;
+    }
+
+    .card-limitation:nth-child(2) {
+        margin-right: auto;
+    }
+
+    .curved-line-left {
+        display: block;
+        min-width: 365px;
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 1640px) {
+    .bmi-limitations {
+        column-gap: 2.5vw;
+    }
+    .curved-line-left {
+        margin-left: auto;
+        min-width: 565px;
+    }
+}

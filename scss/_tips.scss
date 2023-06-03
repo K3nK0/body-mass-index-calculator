@@ -1,9 +1,25 @@
 .tips {
-    padding: 56px 20px;
-    display: grid;
-    grid-template: auto 1fr / 1fr;
-    gap: 40px;
+    position: relative;
     margin-bottom: 72px;
+
+    .tips-container {
+        position: relative;
+        display: grid;
+        grid-template: auto 1fr / 1fr;
+        gap: 40px;
+        padding: 56px 20px;
+    }
+
+    .background-tips {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        width: 100vw;
+        height: 100%;
+        background-image: linear-gradient(290.1deg, #D6E6FE 0%, rgba(214, 252, 254, 0) 100%);
+        opacity: 25%;
+        z-index: -1;
+    }
 
     img {
         margin-bottom: 32px;
@@ -27,10 +43,21 @@
 @media (min-width: 768px) {
 
     .tips {
-        padding: 60px 40px;
+        margin-bottom: 96px;
 
         img {
             margin: 0;
+        }
+
+        .tips-container {
+            padding: 60px 40px;
+            display: grid;
+            grid-template: auto 1fr / 1fr;
+            gap: 40px;
+        }
+    
+        .background-tips {
+            left: 0px;
         }
     }
     .container-tips {
@@ -44,8 +71,18 @@
 @media (min-width: 1024px) {
 
     .tips {
-        grid-template: 1fr / repeat(3, 1fr);
-        padding: 72px 9.7vw 96px;
+        position: relative;
+        margin-bottom: 120px;
+
+        .tips-container {
+            padding: 72px 9.7vw 96px;
+            grid-template: 1fr / repeat(3, 1fr);
+        }
+    
+        .background-tips {
+            padding: 0 24px;
+            background-clip: content-box;
+        }
     }
 
     .container-tips {
